@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="NXPhotoPickerToolBarThumbCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iko-Nx-0qa">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lWQ-qR-u1x">
+                                <rect key="frame" x="0.0" y="10" width="40" height="40"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQa-Ih-K4o">
+                                <rect key="frame" x="30" y="0.0" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="QgP-Pi-BBs"/>
+                                    <constraint firstAttribute="width" constant="20" id="uOd-53-bhB"/>
+                                    <constraint firstAttribute="height" constant="20" id="xhG-uF-cvc"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="yKx-ZU-GWi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" backgroundImage="del_lv"/>
+                                <connections>
+                                    <action selector="cancalButtonAciont:" destination="gTV-IL-0wX" eventType="touchUpInside" id="T0A-iY-1F5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93797720330000001" green="0.93797720330000001" blue="0.93797720330000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XQa-Ih-K4o" secondAttribute="trailing" id="PuQ-qD-htl"/>
+                            <constraint firstAttribute="trailing" secondItem="lWQ-qR-u1x" secondAttribute="trailing" constant="10" id="VZx-f9-qwm"/>
+                            <constraint firstItem="lWQ-qR-u1x" firstAttribute="top" secondItem="Iko-Nx-0qa" secondAttribute="top" constant="10" id="X79-Bv-XZP"/>
+                            <constraint firstAttribute="bottom" secondItem="lWQ-qR-u1x" secondAttribute="bottom" id="hGF-x5-WZF"/>
+                            <constraint firstItem="lWQ-qR-u1x" firstAttribute="leading" secondItem="Iko-Nx-0qa" secondAttribute="leading" id="jUo-qT-z3U"/>
+                            <constraint firstItem="XQa-Ih-K4o" firstAttribute="top" secondItem="Iko-Nx-0qa" secondAttribute="top" id="u6b-pf-VuQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Iko-Nx-0qa" secondAttribute="trailing" id="8fr-t0-cGc"/>
+                <constraint firstItem="Iko-Nx-0qa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="AXn-Pn-Ox5"/>
+                <constraint firstItem="Iko-Nx-0qa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Pkr-EH-lbT"/>
+                <constraint firstAttribute="bottom" secondItem="Iko-Nx-0qa" secondAttribute="bottom" id="u3l-Vh-2HY"/>
+            </constraints>
+            <connections>
+                <outlet property="backGroudView" destination="Iko-Nx-0qa" id="nEs-TB-6nN"/>
+                <outlet property="cancelButton" destination="XQa-Ih-K4o" id="NKc-r9-j3c"/>
+                <outlet property="imageView" destination="lWQ-qR-u1x" id="ybt-s0-HSj"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="del_lv" width="20" height="20"/>
+    </resources>
+</document>
